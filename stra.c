@@ -33,37 +33,39 @@ char *Str_concat (char psDst[], const char psSrc[]) {
             for (i = 0; i < lengthDst; i++) {
                 psDst[lengthDst + i] = psSrc[i];
         }
-    psDst[lengthDst + lengthSrc] = "\0";
+    psDst[lengthDst + lengthSrc] = '\0';
     return psDst;
     }
 
 /* Compares two strings and returns 0 if the strings are equal, <1 if psSrc is less than psDst, and >1 if 
 psSrc is greater than psDst*/
 int Str_compare (const char psSrc[], const char psDst[]) {
-    assert(psDst != NULL && psSrc != NULL);
     size_t lengthSrc = Str_getLength(psSrc);
     size_t lengthDst = Str_getLength(psDst);
     size_t i;
+    assert(psDst != NULL && psSrc != NULL);
     for (i = 0; i < lengthSrc; i++) {
-        for (int j = 0; j < lengthDst; j++) {
+        size_t j;
+        for (j = 0; j < lengthDst; j++) {
             if (psSrc[i] < psDst[j]) {
                 return -1;
             }
-            else if psSrc[i] > psDst[j] {
+            else if (psSrc[i] > psDst[j]) {
                 return 1;
             }
         }
-        return 0;
     }
+    return 0;
 }
 
 /* Finds the first occurance of the second parameter taken in the first parameter. Returns entire string if no value is searched 
 for, returns value if found, returns null if not */
 char *Str_search (const char *psDst[], const char *psSrc[]) {
+} /*{
     assert(psDst != NULL && psSrc != NULL);
     size_t lengthSrc = Str_getLength(psSrc);
     size_t lengthDst = Str_getLength(psDst);
-    size_t i;
+    size_t i,j;
     for (i = 0; i < lengthDst; i++) {
         if (Str_compare(psSrc[i], psDst[i]) == 0){
             int startTrace = psDst[i];
@@ -80,3 +82,4 @@ char *Str_search (const char *psDst[], const char *psSrc[]) {
         else return psDst;
     }
 }
+*/
