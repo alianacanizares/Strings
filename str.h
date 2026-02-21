@@ -1,3 +1,6 @@
+#include <stdio.h>
+#include <stddef.h>
+#include <assert.h>
 
 #ifndef STR_INCLUDED
 #define STR_INCLUDED
@@ -8,15 +11,15 @@ size_t Str_getLength(const char pcSrc[]);
 
 /* X */
 
-char *Str_copy(const char pcSrc[], char pcDst[]);
+char *Str_copy(char pcDst[], const char pcSrc[]);
 
 /* X */
 
-char *Str_concat (char psSrc[], const char psDst[]);
+char *Str_concat (char psDst[], const char psSrc[]);
 
 /* X */
 
-int *Str_compare (const char psSrc[], const char psDst[]);
+int Str_compare (const char psSrc[], const char psDst[]);
 
 /* X */
 
