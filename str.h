@@ -8,18 +8,18 @@ size_t Str_getLength(const char pcSrc[]);
 
 /* X */
 
-size_t Str_copy();
+char *Str_copy(const char pcSrc[], char pcDst[]);
 
 /* X */
 
-size_t Str_concat();
+char *Str_concat (char psSrc[], const char psDst[]);
 
 /* X */
 
-size_t Str_compare(): 
+int *Str_compare (const char psSrc[], const char psDst[]);
 
 /* X */
 
-size_t Str_search();
+char *Str_search (const char *psDst[], const char *psSrc[]);
 
 #endif
