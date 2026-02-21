@@ -13,7 +13,6 @@ size_t Str_getLength(const char pcSrc[]) {
 
 /* Copy the string pointed by the array psSrc, to the destination string taken as parameters.  */
 char *Str_copy(char pcDst[], const char pcSrc[]) {
-    int length;
     size_t length = Str_getLength(pcSrc);
     size_t i;
     assert(pcDst != NULL && pcSrc != NULL);
@@ -25,17 +24,17 @@ char *Str_copy(char pcDst[], const char pcSrc[]) {
 }
 
 /* Prints a new version of the source string with the destination string concatenated to the end. Returns
-the modified source string */
+the modified destination */
 char *Str_concat (char psDst[], const char psSrc[]) {
-    lengthSrc = Str_getLength(psSrc);
-    lengthDst = Str_getLength(psDst);
+    size_t lengthSrc = Str_getLength(psSrc);
+    size_t lengthDst = Str_getLength(psDst);
     size_t i;
     assert(psDst != NULL && psSrc != NULL);
             for (i = 0; i < lengthDst; i++) {
-                psSrc[lengthSrc + i] = psDst[i];
+                psDst[lengthDst + i] = psSrc[i];
         }
     psDst[lengthDst + lengthSrc] = "\0";
-    return psSrc;
+    return psDst;
     }
 
 /* Compares two strings and returns 0 if the strings are equal, <1 if psSrc is less than psDst, and >1 if 
