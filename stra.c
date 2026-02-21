@@ -1,4 +1,8 @@
 
+#include <stdio.h>
+#include <stdlib.h>
+#include<str.h>
+
 /* Str_getLength functions by taking in an array  */
 
 size_t Str_getLength(const char pcSrc[]) {
@@ -58,7 +62,23 @@ int *Str_compare (const char psSrc[], const char psDst[]) {
 /* Finds the first occurance of the second parameter taken in the first parameter. Returns entire string if no value is searched 
 for, returns value if found, returns null if not */
 char *Str_search (const char *psDst[], const char *psSrc[]) {
-    assert(psDst != NULL && pcSrc != NULL);         // questionable
-    
+    assert(psDst != NULL && pcSrc != NULL);
+    lengthSrc = Str_getLength(psSrc);
+    lengthDst = Str_getLength(psDst);
 
+    for (i = 0; i < lengthDst; i++) {
+        if (Str_compare(psSrc[i], psDst[i]) = 0){
+            startTrace = psDst[i];
+            for (j= 0; j < lengthSrc; j++){
+                if (Str_compare(psSrc[j+1], psDst[j+1])) {
+                    endString = psDst[j];
+                }
+                else (return psDst[endString - startTrace])
+            }
+            else if (psSrc != 0) {
+                return NULL;
+            }
+        }
+        else return psDst;
+    }
 }
