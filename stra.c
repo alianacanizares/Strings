@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include "str.h"
+#include <stddef.h>
 
 /* Str_getLength functions by taking in an array  */
 
