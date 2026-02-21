@@ -1,7 +1,4 @@
 
-#include <stdio.h>
-#include <stdlib.h>
-#include<str.h>
 
 /* Str_getLength functions by taking in an array  */
 
@@ -65,13 +62,12 @@ char *Str_search (const char *psDst[], const char *psSrc[]) {
     assert(psDst != NULL && pcSrc != NULL);
     lengthSrc = Str_getLength(psSrc);
     lengthDst = Str_getLength(psDst);
-
     for (i = 0; i < lengthDst; i++) {
         if (Str_compare(psSrc[i], psDst[i]) = 0){
             startTrace = psDst[i];
             for (j= 0; j < lengthSrc; j++){
                 if (Str_compare(psSrc[j+1], psDst[j+1])) {
-                    endString = psDst[j];
+                    endString = psDst[j+1];
                 }
                 else (return psDst[endString - startTrace])
             }
