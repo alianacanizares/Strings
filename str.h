@@ -22,7 +22,16 @@ char *Str_concat (char psDst[], const char psSrc[]);
 int Str_compare (const char psSrc[], const char psDst[]);
 
 /* X */
-
+/*
 char *Str_search (const char *psDst[], const char *psSrc[]);
+*/
+
+/* Str_getLength functions by taking in an array  */
+
+size_t Str_getLength(const char *pcSrc);
+
+/* Copy the string pointed by the array psSrc, to the destination string taken as parameters.  */
+char *Str_copy(char *pcDst, const char *pcSrc);
+
 
 #endif
