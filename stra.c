@@ -40,7 +40,7 @@ char *Str_concat (char pcDst[], const char pcSrc[]) {
 /* Compares two strings and returns 0 if the strings are equal, <0 if psSrc is less than psDst, and >0 if 
 psSrc is greater than psDst*/
 int Str_compare (const char pcSrc[], const char pcDst[]) {
-    size_t i;
+    size_t i = 0;
     assert(pcDst != NULL && pcSrc != NULL);
     while (pcSrc[i] != '\0' && pcDst[i] != '\0') {
             if (pcSrc[i] < pcDst[i]) {
