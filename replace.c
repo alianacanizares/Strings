@@ -17,10 +17,27 @@
    assumptions about the maximum number of replacements or the
    maximum number of characters in strings pcLine, pcFrom, or pcTo. */
 
-static size_t replaceAndWrite(const char *pcLine,
-                              const char *pcFrom, const char *pcTo)
-{
-   /* Insert your code here. */
+static size_t replaceAndWrite(const char *pcLine, const char *pcFrom, const char *pcTo) {
+   
+   char *pcStart = *pcLine;
+   int replace;
+   int count;
+   char *copy;
+   assert(pcLine != NULL && pcFrom != NULL && pcTo != NULL);
+   while (*pcLine != '\0') {
+   if (*pcFrom == '\0') {
+      return 0;
+   }
+   else  
+   int replace = Str_compare(*pcLine, *pcFrom);
+   pcLine++;
+   }
+   else if (replace == 0) {
+      count++;
+      pcFrom = *pcTo;
+      pcFrom++;
+   }
+   return count;
 }
 
 /*--------------------------------------------------------------------*/

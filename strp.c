@@ -45,7 +45,7 @@ char *Str_concat (char *pcDst, const char *pcSrc) {
    return pcStart;
 } 
 
-int Str_compare (const char pcSrc[], const char pcDst[]) {
+int Str_compare (const char *pcSrc, const char *pcDst) {
    assert(pcDst != NULL && pcSrc != NULL);
    while (*pcSrc != '\0' && *pcDst != '\0') {
       if (*pcSrc < *pcDst) {
