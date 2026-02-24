@@ -66,3 +66,32 @@ int Str_compare (const char *pcSrc, const char *pcDst) {
    }
    else return 1;
 }
+
+
+char *Str_search (const char *pcDst, const char *pcSrc) {
+   const char *startTrace = 0;
+   const char *fLoopDst = 0;
+   const char *fLoopSrc = 0;
+   assert(pcDst != NULL && pcSrc != NULL);
+   if (*pcSrc == '\0') {
+      return (char *)pcDst;
+   }
+   while (*pcDst != '\0') {
+      if (*pcSrc == *pcDst) {
+         startTrace = pcDst;
+         fLoopDst = pcDst;
+         fLoopSrc = pcSrc;
+         while (*pcSrc != '\0') {
+            if(*fLoopDst == *fLoopSrc) {
+               fLoopDst++;
+               fLoopSrc++;
+            }
+            else {
+               return (char *)startTrace;
+            }
+         }
+      pcDst++;
+      }
+   }
+   return NULL;
+}

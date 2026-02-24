@@ -7,6 +7,7 @@
 #include <stdio.h>
 #include <assert.h>
 #include <stdlib.h>
+#include <string.h>
 
 /*--------------------------------------------------------------------*/
 
@@ -18,25 +19,27 @@
    maximum number of characters in strings pcLine, pcFrom, or pcTo. */
 
 static size_t replaceAndWrite(const char *pcLine, const char *pcFrom, const char *pcTo) {
-   
-   char *pcStart = *pcLine;
-   int replace;
-   int count;
-   char *copy;
+   size_t count = 0;
+   size_t lengthNeeded;
+   const char *pcLineCopy = pcLine;
+   lengthNeeded = Str_getLength(pcFrom);
    assert(pcLine != NULL && pcFrom != NULL && pcTo != NULL);
-   while (*pcLine != '\0') {
-   if (*pcFrom == '\0') {
-      return 0;
-   }
-   else  
-   int replace = Str_compare(*pcLine, *pcFrom);
-   pcLine++;
-   }
-   else if (replace == 0) {
-      count++;
-      pcFrom = *pcTo;
-      pcFrom++;
-   }
+         if (*pcFrom == '\0') {
+         printf("%s", pcLine);
+         return 0;
+      }
+      while (*pcLineCopy != '\0') {
+         const char *check = strstr(pcLineCopy, pcFrom);
+         if (check == NULL) {
+            printf("%s", pcLineCopy);
+            return count;
+         }
+         printf("%.*s", (int)(check - pcLineCopy), pcLineCopy);
+            printf("%s", pcTo);
+            count++;
+            pcLineCopy = check + lengthNeeded;
+      }
+
    return count;
 }
 
@@ -72,9 +75,12 @@ int main(int argc, char *argv[])
    pcFrom = argv[1];
    pcTo = argv[2];
 
-   while (fgets(acLine, MAX_LINE_SIZE, stdin) != NULL)
+   while (fgets(acLine, MAX_LINE_SIZE, stdin) != NULL) {
       /* Insert your code here. */
 
+            uReplaceCount += replaceAndWrite(acLine, pcFrom, pcTo); 
+         }
+      
    fprintf(stderr, "%lu replacements\n", (unsigned long)uReplaceCount);
-   return 0;
+            return 0;
 }

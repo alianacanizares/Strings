@@ -469,7 +469,7 @@ static void testCompare(void)
 /*--------------------------------------------------------------------*/
 
 /* Test the Str_search() function. */
-/*
+
 static void testSearch(void)
 {
    const char *pcResult1;
@@ -748,7 +748,6 @@ static void testSearch(void)
       }
    }
 }
-*/
 
 /*--------------------------------------------------------------------*/
 
@@ -767,7 +766,7 @@ int main(int argc, char *argv[])
    testCopy();
    testConcat();
    testCompare();
-  /* testSearch(); */
+   testSearch(); 
 
    printf("End of %s.\n", argv[0]);
    return 0;

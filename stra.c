@@ -61,27 +61,21 @@ int Str_compare (const char pcSrc[], const char pcDst[]) {
 }
 
 /* Finds the first occurance of the second parameter taken in the first parameter. Returns entire string if no value is searched 
-for, returns value if found, returns null if not 
-char *Str_search (const char *psDst[], const char *psSrc[]) {
-} 
+for, returns value if found, returns null if not */
+/*char *Str_search (const char pcDst[], const char pcSrc[]) {
+    size_t i = 0;
+    size_t lengthDst = Str_getLength(pcDst);
     assert(psDst != NULL && psSrc != NULL);
-    size_t lengthSrc = Str_getLength(psSrc);
-    size_t lengthDst = Str_getLength(psDst);
-    size_t i,j;
-    for (i = 0; i < lengthDst; i++) {
-        if (Str_compare(psSrc[i], psDst[i]) == 0){
-            int startTrace = psDst[i];
-            for (int j= 0; j < lengthSrc; j++){
-                if (Str_compare(psSrc[j+1], psDst[j+1])) {
-                    int endString = psDst[j+1];
-                }
-                else (return psDst[endString - startTrace])
-            }
-            else if (psSrc != 0) {
-                return NULL;
-            }
-        }
-        else return psDst;
+    if (pcSrc[0] == '\0') {
+        return psDst;
     }
-}
-*/
+    else for (i = 0; i < lengthDst; i++) {
+        if (Str_compare(pcSrc[i], pcDst[i]) == 0) {
+            
+        }
+    }
+
+
+    return psDst;
+}*/
+

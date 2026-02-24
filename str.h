@@ -33,5 +33,9 @@ size_t Str_getLength(const char *pcSrc);
 /* Copy the string pointed by the array psSrc, to the destination string taken as parameters.  */
 char *Str_copy(char *pcDst, const char *pcSrc);
 
+/* Finds the first occurance of the second parameter taken in the first parameter. Returns entire string if no value is searched 
+for, returns value if found, returns null if not */
+char *Str_search (const char *pcDst, const char *pcSrc);
+
 
 #endif
