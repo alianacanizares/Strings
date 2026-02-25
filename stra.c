@@ -54,21 +54,11 @@ int Str_compare (const char pcSrc[], const char pcDst[]) {
     else return 1;
 }
 
-/*
+
 char *Str_search (const char pcDst[], const char pcSrc[]) {
     size_t i = 0;
     size_t lengthDst = Str_getLength(pcDst);
     assert(psDst != NULL && psSrc != NULL);
-    if (pcSrc[0] == '\0') {
-        return psDst;
-    }
-    else for (i = 0; i < lengthDst; i++) {
-        if (Str_compare(pcSrc[i], pcDst[i]) == 0) {
-            
-        }
-    }
 
-
-    return psDst;
 }
-*/
+
