@@ -22,7 +22,7 @@ static size_t replaceAndWrite(const char *pcLine, const char *pcFrom, const char
    size_t count = 0;
    size_t lengthNeeded;
    const char *pcLineCopy = pcLine;
-   lengthNeeded = Str_getLength(pcFrom);
+   lengthNeeded = strlen(pcFrom);
    assert(pcLine != NULL && pcFrom != NULL && pcTo != NULL);
          if (*pcFrom == '\0') {
          printf("%s", pcLine);
