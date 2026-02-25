@@ -1,8 +1,8 @@
 
+
 #include "str.h"
 
-
-size_t Str_getLength(const char pcSrc[]) {
+size_t Str_getLength(const char pcSrc[]){
     size_t uLength = 0;
     assert(pcSrc != NULL);
     while (pcSrc[uLength] != '\0')
@@ -10,7 +10,7 @@ size_t Str_getLength(const char pcSrc[]) {
     return uLength;
 }
 
-char *Str_copy(char pcDst[], const char pcSrc[]) {
+char *Str_copy(char pcDst[], const char pcSrc[]){
     size_t length = Str_getLength(pcSrc);
     size_t i;
     assert(pcDst != NULL && pcSrc != NULL);
@@ -21,7 +21,7 @@ char *Str_copy(char pcDst[], const char pcSrc[]) {
 
 }
 
-char *Str_concat (char pcDst[], const char pcSrc[]) {
+char *Str_concat (char pcDst[], const char pcSrc[]){
     size_t lengthSrc = Str_getLength(pcSrc);
     size_t lengthDst = Str_getLength(pcDst);
     size_t i;
@@ -33,14 +33,14 @@ char *Str_concat (char pcDst[], const char pcSrc[]) {
     return pcDst;
     }
 
-int Str_compare (const char pcSrc[], const char pcDst[]) {
+int Str_compare (const char pcSrc[], const char pcDst[]){
     size_t i = 0;
     assert(pcDst != NULL && pcSrc != NULL);
     while (pcSrc[i] != '\0' && pcDst[i] != '\0') {
-            if (pcSrc[i] < pcDst[i]) {
+            if (pcSrc[i] < pcDst[i]){
                 return -1;
             }
-            else if (pcSrc[i] > pcDst[i]) {
+            else if (pcSrc[i] > pcDst[i]){
                 return 1;
             }
             i++;
@@ -54,11 +54,11 @@ int Str_compare (const char pcSrc[], const char pcDst[]) {
     else return 1;
 }
 
-
+/*
 char *Str_search (const char pcDst[], const char pcSrc[]) {
     size_t i = 0;
     size_t lengthDst = Str_getLength(pcDst);
-    assert(psDst != NULL && psSrc != NULL);
+    assert(pcDst != NULL && pcSrc != NULL);
 
 }
-
+*/

@@ -2,6 +2,7 @@
 #include <stddef.h>
 #include <assert.h>
 
+
 #ifndef STR_INCLUDED
 #define STR_INCLUDED
 
@@ -38,7 +39,7 @@ char *Str_concat (char *pcDst, const char *pcSrc);
 
 /* Compares two strings and returns 0 if the strings are equal, <0 if psSrc is less than psDst, and >0 if 
 psSrc is greater than psDst. Returns int value. */
-int Str_compare (const char *pcSrc, const char *pcDst)
+int Str_compare (const char *pcSrc, const char *pcDst);
 
 /* Finds the first occurance of the second parameter taken in the first parameter. Returns entire string if no value is searched 
 for, returns value if found, returns null if not */
