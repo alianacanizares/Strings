@@ -1,8 +1,6 @@
 
 #include "str.h"
 
-/* Str_getLength functions by taking in an array  */
-
 size_t Str_getLength(const char *pcSrc)
 {
    const char *pcEnd;
@@ -13,7 +11,6 @@ size_t Str_getLength(const char *pcSrc)
    return (size_t)(pcEnd - pcSrc);
 }
 
-/* Copy the string pointed by the array psSrc, to the destination string taken as parameters.  */
 char *Str_copy(char *pcDst, const char *pcSrc) {
    char *pcStart = pcDst;
    assert(pcDst != NULL && pcSrc != NULL);
@@ -27,8 +24,7 @@ char *Str_copy(char *pcDst, const char *pcSrc) {
     return pcStart;
 }
 
-/* Prints a modified null-terminated version of the destination string with the source string concatenated to the end. Returns
-the modified destination */
+
 char *Str_concat (char *pcDst, const char *pcSrc) {
    char *pcStart = pcDst;
    assert(pcDst != NULL && pcSrc != NULL);
@@ -67,11 +63,12 @@ int Str_compare (const char *pcSrc, const char *pcDst) {
    else return 1;
 }
 
-
+/* Finds the first occurance of the second parameter taken in the first parameter. Returns entire string if no value is searched 
+for, returns value if found, returns null if not */
 char *Str_search (const char *pcDst, const char *pcSrc) {
-   const char *startTrace = 0;
-   const char *fLoopDst = 0;
-   const char *fLoopSrc = 0;
+   const char *startTrace;
+   const char *fLoopDst;
+   const char *fLoopSrc;
    assert(pcDst != NULL && pcSrc != NULL);
    if (*pcSrc == '\0') {
       return (char *)pcDst;
@@ -81,7 +78,7 @@ char *Str_search (const char *pcDst, const char *pcSrc) {
          startTrace = pcDst;
          fLoopDst = pcDst;
          fLoopSrc = pcSrc;
-         while (*pcSrc != '\0') {
+         while (*fLoopDst != '\0' && *fLoopDst != '\0') {
             if(*fLoopDst == *fLoopSrc) {
                fLoopDst++;
                fLoopSrc++;

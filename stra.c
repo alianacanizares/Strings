@@ -1,7 +1,6 @@
 
 #include "str.h"
 
-/* Str_getLength functions by taking in an array  */
 
 size_t Str_getLength(const char pcSrc[]) {
     size_t uLength = 0;
@@ -11,7 +10,6 @@ size_t Str_getLength(const char pcSrc[]) {
     return uLength;
 }
 
-/* Copy the string pointed by the array psSrc, to the destination string taken as parameters.  */
 char *Str_copy(char pcDst[], const char pcSrc[]) {
     size_t length = Str_getLength(pcSrc);
     size_t i;
@@ -23,8 +21,6 @@ char *Str_copy(char pcDst[], const char pcSrc[]) {
 
 }
 
-/* Prints a modified null-terminated version of the destination string with the source string to the end. Returns
-the modified destination */
 char *Str_concat (char pcDst[], const char pcSrc[]) {
     size_t lengthSrc = Str_getLength(pcSrc);
     size_t lengthDst = Str_getLength(pcDst);
@@ -37,8 +33,6 @@ char *Str_concat (char pcDst[], const char pcSrc[]) {
     return pcDst;
     }
 
-/* Compares two strings and returns 0 if the strings are equal, <0 if psSrc is less than psDst, and >0 if 
-psSrc is greater than psDst*/
 int Str_compare (const char pcSrc[], const char pcDst[]) {
     size_t i = 0;
     assert(pcDst != NULL && pcSrc != NULL);
@@ -60,9 +54,8 @@ int Str_compare (const char pcSrc[], const char pcDst[]) {
     else return 1;
 }
 
-/* Finds the first occurance of the second parameter taken in the first parameter. Returns entire string if no value is searched 
-for, returns value if found, returns null if not */
-/*char *Str_search (const char pcDst[], const char pcSrc[]) {
+/*
+char *Str_search (const char pcDst[], const char pcSrc[]) {
     size_t i = 0;
     size_t lengthDst = Str_getLength(pcDst);
     assert(psDst != NULL && psSrc != NULL);
@@ -77,5 +70,5 @@ for, returns value if found, returns null if not */
 
 
     return psDst;
-}*/
-
+}
+*/

@@ -74,9 +74,8 @@ int main(int argc, char *argv[])
 
    pcFrom = argv[1];
    pcTo = argv[2];
-
+   /* Keeps track of how many replacements are made. Returns final count. */
    while (fgets(acLine, MAX_LINE_SIZE, stdin) != NULL) {
-      /* Insert your code here. */
 
             uReplaceCount += replaceAndWrite(acLine, pcFrom, pcTo); 
          }
